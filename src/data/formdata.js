@@ -36,7 +36,7 @@ export const formDetails = [
             },
             {
                 id: 3,
-                title: "Country",
+                title: "country",
                 type: "text"
             }
         ]

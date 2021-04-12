@@ -7,6 +7,7 @@
   &__title {
     margin-bottom: 20px;
     font-size: 1.5rem;
+    color: #126e82;
   }
   &__form {
     width: 50%;
@@ -16,44 +17,65 @@
     border-radius: 20px;
     -webkit-box-shadow: 0px 0px 5px 1px #126e82;
     box-shadow: 0px 0px 5px 1px #126e82;
-    position: relative;
 
-    &__input {
-      display: block;
-      width: 70%;
-      margin: 0 auto 20px auto;
-      height: 40px;
-      font-size: 1rem;
-      padding-left: 10px;
-      border: none;
-      background-color: #132c33;
-      color: #d8e3e7;
-      letter-spacing: 1px;
-      border-radius: 5px;
-      &:first-child {
-        margin-top: 50px;
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &__input {
+        width: 100%;
+
+        &__item {
+          display: block;
+          width: 70%;
+          margin: 0 auto 10px auto;
+          height: 40px;
+          font-size: 1rem;
+          padding-left: 10px;
+          border: none;
+          background-color: #132c33;
+          color: #d8e3e7;
+          letter-spacing: 1px;
+          border-radius: 5px;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::placeholder {
+            color: lightgray;
+          }
+        }
       }
+      /*buttons*/
+      &__buttons {
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
 
-      &:focus {
-        outline: none;
-      }
+        &__btn {
+          margin: 0 10px 0 0;
+          padding: 15px 70px;
+          cursor: pointer;
+          border: none;
+          background-color: #132c33;
+          color: #51c4d3;
+          font-size: 1rem;
+          font-weight: bold;
+          border-radius: 5px;
+          transition: 0.2s;
 
-      &::placeholder {
-        color: #d8e3e7;
-      }
-    }
-
-    &__buttons {
-      position: absolute;
-      bottom: 50px;
-      right: 50px;
-
-      &__btn {
-        margin: 0 10px 0 0;
-        padding: 15px 70px;
-        cursor: pointer;
-        border: none;
-        background-color: #51c4d3;
+          &:hover {
+            background-color: #51c4d3;
+            color: #132c33;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
       }
     }
   }
